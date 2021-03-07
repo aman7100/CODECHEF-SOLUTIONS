@@ -1,0 +1,60 @@
+//CODECHEF
+//EASY PROBLEM
+//CODE-MAXFUN
+#include<bits/stdc++.h>
+using namespace std;
+
+#define E 1e-9
+#define tcl             int test = 0; cin >> test; while(test--)   
+#define fl(i, val, n)   for(int i = val; i < n; i++)  
+#define dfl(i, n, val)  for(int i = n-1; i >= val; i--)     
+#define rfl(e, cont)    for(auto &e: cont)
+#define input(cont, n)  for(int i = 0; i < n ; i++)  cin >> cont[i];     
+#define output(cont, n)  for(int i = 0; i < n; i++)   cout << cont[i] << ((i != n-1)?" ":"\n");                 
+#define pub             push_back   
+#define pob             pop_back
+#define eb              emplace_back     
+#define asc(cont)       sort(cont.begin(), cont.end())       
+#define dsc(cont)       sort(cont.rbegin(), cont.rend())     
+#define maxr(cont)      max_element(cont.begin(), cont.end())    
+#define minr(cont)      min_element(cont.begin(), cont.end())    
+
+using LL    = int64_t;
+using VI    = vector<int>;
+using VVI   = vector<vector<int>>;
+using VLL   = vector<LL>;
+using VS    = vector<string>;
+using VC    = vector<char>;
+using STK   = stack<int>;
+using QUE   = queue<int>;
+using MII   = map<int, int>;
+using MLL   = map<LL, LL>;
+using MCI   = map<char, int>;
+using MSI   = map<string, int>;
+using UMII  = unordered_map<int, int>;
+using UMCI  = unordered_map<char, int>;
+using USI   = unordered_set<int>; 
+using PII   = pair<int, int>;
+using PCI   = pair<char, int>;
+
+
+void solve() {
+    tcl{
+        int n{};
+        cin >> n;
+        VLL arr(n, 0);
+        input(arr, n)
+        asc(arr);
+        cout << 2*(arr[n-1]-arr[0]) << "\n";
+    }
+}
+
+
+int main(){
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr); cout.tie(nullptr);
+    // freopen("input.txt", "r", stdin);
+	// freopen("output.txt", "w", stdout);
+    solve();
+    return 0;
+}
