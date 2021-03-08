@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+//CODECHEF
+//MARCH-LONG CHALLENGE
+//CODE-GROUPS
+//USERNAME-aman_7100
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t-->0)
+	{
+	    string s;int c=0;
+	    cin>>s;
+	    char x[s.length()];
+	   //  if(x[0]=='1')
+	   //     {
+	   //         c=c+1;
+	   //     }
+	    for(int i=1;i<sizeof(x);i++)
+	    {
+	         x[i]=s[i];
+	       
+	        if(x[i]=='1' && x[i]!=x[i-1])
+	        {
+	            c=c+1;
+	        }
+	    }
+	    cout<< c<<endl;
+	}
+	return 0;
+}
