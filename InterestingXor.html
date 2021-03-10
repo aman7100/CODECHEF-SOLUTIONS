@@ -3,57 +3,26 @@
 //INTERESTING XOR
 //CODE-IRSTXOR
 //USERNAME-aman_7100
-
-
 #include <bits/stdc++.h>
 using namespace std;
-
-int get_Xor(int x, int y)
-{
-    return (x | y) - (x & y);
+int main() {
+	long int tail;
+	cin>>tail;
+	while(tail--){
+		long int num;
+		cin>>num;
+		long int super=0,mod=1;
+		while(num>=super)	{
+			super=pow(2,mod);
+			mod++;
+		}
+		long int A= pow(2,mod-2)-1;
+		long int sub=super-num;
+		long int aws=A*(A+sub);
+		cout<<aws<<endl;
+	}
+	return 0;
 }
 
-bool isPowerOfTwo(int n)
-{
-   if(n==0)
-   return false;
+
  
-   return (ceil(log2(n)) == floor(log2(n)));
-}
-
-int main()
-{
-    int t;
-    cin>>t;
-
-    while(t--)
-    {
-        int c;
-        cin>>c;
-        int n=c+1;
-        while(1)
-        {
-            if(isPowerOfTwo(n))
-            {
-                break;
-            }
-            n++;
-        }
-        int maxPro=INT_MIN;
-        int currentPro;
-        for(int a=1; a<n; a++)
-        {
-            for(int b=1; b<n; b++)
-            {
-                if(get_Xor(a,b)==c)
-                {
-                    currentPro=a*b;
-                    maxPro=max(maxPro, currentPro);
-                }
-            }
-        }
-        cout<<maxPro<<endl;
-    }
-
-    return 0;
-}
