@@ -1,0 +1,42 @@
+//CODECHEF
+//MARCH LONG CHALLENGE
+//DIVISION 3
+//CODE-NOTIME
+//USER-aman_7100
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	try{
+	    	Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
+		int H = sc.nextInt();
+		int x = sc.nextInt();
+		int t[] = new int[N];
+		int sum = x;
+		
+		for(int i = 0 ; i< N ; i++ ){
+		    t[i]=sc.nextInt();
+		    if( sum + t[i] >= H){
+		        System.out.println("YES");
+		        return;
+		    }
+		}
+		System.out.println("NO");
+			
+		}
+
+        
+	
+	catch(Exception e){
+	    return ;
+	}
+	
+		
+	}
+}
