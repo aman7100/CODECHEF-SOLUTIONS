@@ -1,0 +1,25 @@
+//CODECHEF
+//MARTCH LONG CHALLENGE
+//CODE-SPACEARR
+//USER-aman7100
+//INSTA-_i_aman
+# cook your dish here
+T=int(input())
+for i in range(T):
+    n=int(input())
+    a=[int(x) for x in input().split()]
+    a.sort()
+    t=(n*(n+1))/2
+    j=1
+    for k in a:
+        if k>j:
+            print("Second")
+            break
+        j+=1
+    else:
+        c=sum(a)
+        c=t-c
+        if c<=0 or c%2==0:
+            print("Second")
+        else:
+            print("First")
