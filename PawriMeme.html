@@ -1,0 +1,55 @@
+//CODECHEF
+//COOKOFF SOLUTIONS
+//USER-aman7100
+//CODE-PAWRI
+#include <bits/stdc++.h>
+#define MAX 1
+#define ll long long
+#define IOS ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define test int t; cin>>t; while(t--)
+#define for_fwd(i,n) for(int i=0;i<n;i++)
+#define for_rev(i,n) for(int i=n-1;i>=0;i--)
+#define for_ele(i,a) for(auto i: a)
+#define decl(n, type) type n
+#define assign(n,val) n = val
+#define init(n,type,val) type n = val
+#define inp(n, type) type n; cin>>n
+#define myIf(a,b,opr) if(a opr b)
+#define myWhile(a,b,opr) while(a opr b)
+#define println(val) cout<<val<<endl
+#define print(val) cout<<val<<' '
+#define incr(n) n++
+#define decr(n) n--
+#define myVect(a,type,size) std::vector<type> a(size)
+#define pb push_back
+#define sort_arr(a,n) std::sort(a,a+n)
+#define sort_fwd(a) std::sort(a.begin(), a.end())
+#define sort_rev(a,type) std::sort(a.begin(), a.end(), greater<type>())
+#define rev_itrble(a) std::reverse(a.begin(),a.end())
+#define myMap(a,type1,type2) std::map<type1, type2> a;
+using namespace std;
+
+bool prime[MAX+1];
+void seive(){
+    memset(prime, true, sizeof(prime));
+    for (int p=2; p*p<=MAX; p++){
+        if (prime[p] == true){
+            for (int i=p*p; i<=MAX; i += p)
+                prime[i] = false;
+        }
+    }
+}
+
+int main() {
+	// your code goes here
+	IOS; test{
+	    inp(S,string);
+	    for_fwd(i,S.length()-4){
+	        if(S.substr(i,5) == "party"){
+	            S[i+2] = 'w'; S[i+3] = 'r'; S[i+4] = 'i';
+	        }
+	    }
+	    println(S);
+	}
+	return 0;
+}
