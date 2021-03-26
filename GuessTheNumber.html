@@ -1,0 +1,64 @@
+//CODECHEF
+//MARCH COOKOFF
+//CODE-GUESSIT
+//USER-aman7100
+#include <bits/stdc++.h>
+using namespace std;
+#define IOS                           \
+    ios_base::sync_with_stdio(false); \
+    cin.tie(NULL);                    \
+    cout.tie(NULL);
+#define pb push_back
+#define mp make_pair
+#define nt(t) \
+    int t;    \
+    cin >> t; \
+    while (t--)
+#define int long long int
+#define loop(n) for (int i = 0; i < n; i++)
+#define ps(x, y) fixed << setprecision(y) << x
+
+void solve()
+{
+    vector<int> v;
+    for (int i = 1; i <= 1000000; i++)
+    {
+        int z = i * i;
+        if (z <= 1000000)
+        {
+            v.push_back(z);
+        }
+        if (z > 1000000)
+        {
+            break;
+        }
+    }
+    int i = 0;
+    int resp = 0;
+    int ans;
+    while (1)
+    {
+        cout << v[i] << endl;
+        i++;
+        // fflush(stdout);
+        int q;
+        cin >> q;
+        if (q == 1)
+        {
+            resp = v[i];
+            break;
+        }
+    }
+    // cout << resp << endl;
+}
+int32_t main()
+{
+    IOS;
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        solve();
+    }
+    return 0;
+}
