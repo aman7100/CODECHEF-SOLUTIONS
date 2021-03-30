@@ -1,0 +1,49 @@
+
+//CODECHEF
+//CODE RUSH 2021
+//USERNAME-aman7100
+//INSTA-_i_aman
+#include <iostream>
+using namespace std;
+
+int main() {
+    int d,y,n;
+    int days;
+    long long int t1,t2;
+    cin>>d;
+    cin>>y;
+    for(int i=0;i<d;i++)
+    {
+        
+        long long int sum=0;
+        cin>>days;
+        for(int j=0;j<days;j++)
+        {
+            cin>>t1;
+            cin>>t2;
+            if(t2 <= 21600)
+            {
+                sum=sum+0;
+            }
+            else 
+            {
+                if(t1>= 21600)
+                {
+                    sum =sum + (t2-t1)*y;
+                }
+                else
+                {
+                    sum=sum+(t2-21600)*y;
+                }
+
+            }
+            
+
+            
+        }
+        cout<<sum<<"\n";
+
+    }
+	// your code goes here
+	return 0;
+}
