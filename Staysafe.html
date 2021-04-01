@@ -1,0 +1,35 @@
+//CODECHEF
+//FOOL YOU 2021
+//USER-aman7100
+//INSTA-_i_aman
+#include<bits/stdc++.h>
+using namespace std;
+
+void solve(){
+	string s;
+	int c=0;
+	getline (cin, s);
+	for(int i=0;i<s.length()-8;i++){
+		if(s[i]=='s'&&s[i+1]=='a'&&s[i+2]=='n'&&s[3+i]=='i'&&s[4+i]=='t'&&s[5+i]=='i'&&s[6+i]=='z'&&s[7+i]=='e'){
+			cout<<"Safe";
+			return;
+		}
+		if(s[i]=='S'&&s[1+i]=='A'&&s[2+i]=='N'&&s[3+i]=='I'&&s[4+i]=='T'&&s[5+i]=='I'&&s[6+i]=='Z'&&s[7+i]=='E'){
+			cout<<"Safe";
+			return;
+		}
+	}
+	cout<<"Not safe";
+}
+
+int main(){
+//	ios_base::sync_with_stdio(false); 
+//	cin.tie(NULL);
+//	cout.tie(NULL);
+	long long i=1,t=1,n;
+//	cin>>t;
+	while(t--){
+	    solve();
+	    i++;
+	}
+}
