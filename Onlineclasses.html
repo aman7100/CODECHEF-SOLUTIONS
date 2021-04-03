@@ -1,0 +1,52 @@
+//CODECHEF
+//CODEPENTRY
+//CODE-ONCLASS
+//USER-aman7100
+//INSTA-_i_aman	
+#include <iostream>
+#include <bits/stdc++.h>
+#include <string>
+#include <cmath>
+#include <set>
+#include <unordered_map>
+#include <list>
+#include <deque>
+#include <vector>
+#include <algorithm>
+#include <iterator>
+using namespace std;
+
+int main() 
+{
+    ios_base::sync_with_stdio(0);
+    cin.tie(NULL); 
+    cout.tie(NULL);
+    long long int t,n,i,q;
+    string s;
+    
+        unordered_map<long long int,int>occ;
+        cin>>n>>q;
+        while(q--)
+        {
+            cin>>s;
+            string d="";
+            for(auto e:s)
+            {
+                if((e>='0') && (e<='9'))
+                    d+=e;
+                if(d.size() && !(e>='0' && e<='9'))
+                    break;
+            }
+            long long int y=stoi(d);
+            occ[y]++;
+        }
+        for(i=1;i<=n;i++)
+        {
+            if(occ[i])
+                cout<<occ[i]<<"\n";
+            else
+                cout<<0<<"\n";
+        }
+    
+    return 0;
+}
