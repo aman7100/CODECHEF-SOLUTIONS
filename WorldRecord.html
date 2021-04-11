@@ -1,0 +1,29 @@
+//CODECHEF
+//APRIL LONG CHALLENGE
+//USER-aman7100
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t-->0)
+	{
+	    double k1,k2,k3,v,s,r;
+	    cin>> k1>> k2>> k3 >> v;
+	    s=(100/(k1*k2*k3*v));
+	   // int q=s*100;
+	   // float r=s/100.0;
+	   r=round(s*100)/100;
+	    if((r>9.58)||(r==9.58)){
+	        cout<< "NO";
+	    }
+	    else
+	    {
+	        cout<< "YES";
+	    }
+	    cout<< endl;
+	}
+	return 0;
+}
