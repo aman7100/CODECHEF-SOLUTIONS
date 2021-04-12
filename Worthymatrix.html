@@ -1,0 +1,75 @@
+//CODECHEF
+//APRIL LONG CHALLENGE
+//CODE-KAVGMAT
+//USER-aman7100
+#include <bits/stdc++.h>
+#define int long long int 
+using namespace std;
+
+void solve();
+
+
+int32_t main()
+{
+	ios::sync_with_stdio(false);
+    cin.tie(0);
+    #ifndef ONLINE_JUDGE
+	freopen("input.txt","r",stdin);
+	freopen("output.txt","w",stdout);
+	#endif
+	solve();
+	return 0;
+}
+// void printArr()
+void solve()
+{
+	int tc;
+	cin>>tc;
+	while(tc--)
+	{
+		int n,m,k;
+		cin>>n>>m>>k;
+		int arr[n][m];
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<m;j++)
+			{
+				cin>>arr[i][j];
+				// cout<<arr[i][j]<<" ";
+			}
+			// cout<<std::endl;
+		}
+			// cout<<std::endl;
+
+		int parr[n+1][m+1];
+		memset(parr,0,sizeof(parr));
+
+		for(int i=1;i<=n;i++)
+		{
+			for(int j=1;j<=m;j++)
+			{
+				parr[i][j]=arr[i-1][j-1]+parr[i-1][j]+parr[i][j-1]-parr[i-1][j-1];
+			}
+		}
+
+		int res = 0;
+		for(int sq=1;sq<=min(m,n);sq++)
+		{
+			int i=sq,j=m;
+			while(i<=n && j>=sq)
+			{
+				int curr_sum=parr[i][j] - parr[i-sq][j] - parr[i][j-sq] + parr[i-sq][j-sq];
+				if(curr_sum >= k*sq*sq) {
+					res += (n-i+1);
+					j--;
+				} else {
+					i++;
+				}
+
+			}
+		}
+
+		cout << res << endl;
+	}
+	return;
+}
